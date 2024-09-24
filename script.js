@@ -22,13 +22,42 @@ function checkNumber(number) {
     let typeOfNumber = number % 2 == 0 ? 'this number is even' : 'this number is odd';
     return typeOfNumber;
 }
-let numberAnswer = checkNumber(6);
+let numberAnswer = checkNumber(7);
 console.log(numberAnswer);
 
 // Task Five
 let array2 = [1,2,3,4,5]
-for (let index = array2.length; index > 0; index--) {
+for (let index = array2.length -1; index > -1; index--) {
     const element = array2[index]; 
     console.log(element);
-     
+}
+
+
+// Task Six
+let getAge = (birthYear, yearNow) => {
+    let age = yearNow - birthYear;
+    let condition = age > 18 
+    ? 'სრულწლოვანი'
+    : 'არასრულწლოვანი'
+    return condition
+}
+let resultAge = getAge(2001, 2024);
+console.log(resultAge);
+
+// Task Seven
+let array3 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+for (let Five of array3) {
+    if (Five == 5) {
+        console.log('არის');
+    }
+}
+
+// Task Eight
+let array4 = [1, 2, 3, 7, 6, 9]
+for (let goodNumbers of array4) {
+    if (goodNumbers == 7) {
+        continue;
+    } else {
+        console.log(goodNumbers); 
+    }    
 }
