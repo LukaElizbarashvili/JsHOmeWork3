@@ -1,19 +1,22 @@
 // Task one
-let array1 = [10, 50, 6, 7, 8, 11, 6, 3, 9];
-let sum = 0;
+function sum(...array1) {
+    let sumElements = 0;
 for (let element of array1){
-    sum +=element;
+    sumElements +=element;
 }
-console.log(sum);
+    return sumElements
+}
+let exactSum = sum(10, 50, 6, 7, 8, 11, 6, 3, 9)
+console.log(exactSum);
 
 // Task two
 
 // Task three
-function getMax(first,second,third) {
-    return Math.max(first, second,third)
+function getMax(...array) {
+    return Math.max(array)
 }
 
-let Max = getMax(15, 100, 1)
+let Max = getMax(15, 100, 1, 7, 500)
 console.log(Max);
 
 
